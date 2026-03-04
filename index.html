@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 
+<!-- head section  -->
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,7 +25,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet" />
-<!-- font family link for bangla  -->
+  <!-- font family link for bangla  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
@@ -84,14 +85,14 @@
       </div>
     </div>
     <div class="image flex-1">
-      <img src="./assets/hero-student.png" alt="">
+      <img class="w-[340px] rounded-full" src="./assets/ahsan.jpg" alt="">
     </div>
 
   </section>
 
   <!-- label container  -->
   <section class="w-11/12 mx-auto">
-    <h2 class="text-[30px] font-bold mb-5 text-center "><span class="text-[#00BCFF]">Let's</span> Learn Vocabularies
+    <h2 class="text-[30px] font-bold mb-5 mt-5 text-center "><span class="text-[#00BCFF]">Let's</span> Learn Vocabularies
     </h2>
     <div id="label-container" class="flex gap-5 flex-wrap justify-center pb-5">
 
@@ -99,12 +100,48 @@
 
   </section>
 
+  <!-- input search button  -->
+  <section class="flex justify-center ">
+    <div class="join gap-2">
+      <div>
+        <label class="input validator join-item">
+          <input id="input-search" type="text" placeholder="search Vocabulary now " required />
+        </label>
+      </div>
+      <button id="btn-search" class="btn btn-primary join-item">search</button>
+    </div>
+  </section>  
+
+  <!-- loading container  -->
+  <section id="spniner" class="flex justify-center items-center py-10 hidden">
+    <span class="loading loading-spinner text-neutral"></span>
+  </section>
+
   <!-- word container -->
   <section id="word-container" class="bg-gray-100 p-10 w-11/12 mx-auto my-10 grid grid-cols-1 md:grid-cols-3 gap-5">
-
+    <div class="text-center col-span-full space-y-4">
+      <p class="text-[#79716B] text-[14px]">আপনি এখনো কোন Lesson Select করেন নি </p>
+      <h2 class="text-[#292524] font-bold">একটি Lesson Select করুন।</h2>
+    </div>
   </section>
+
+  <!-- Open the modal using ID.showModal() method -->
+  <dialog id="word_modal" class="modal modal-bottom sm:modal-middle">
+    <div class="modal-box">
+      <div id="details-container" class="space-y-4">
+
+
+      </div>
+      <div class="modal-action">
+        <form method="dialog">
+          <button class="btn">Close</button>
+        </form>
+      </div>
+    </div>
+  </dialog>
 
   <script src="./script/index.js"></script>
 </body>
 
 </html>
+
